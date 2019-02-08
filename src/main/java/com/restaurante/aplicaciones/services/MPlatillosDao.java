@@ -19,7 +19,8 @@ public class MPlatillosDao {
         return IMPlatillosRepository.findAll();
     }
 
-    public boolean posteaMPlatillos(MPlatillos MPlatillos) {
+    public boolean posteaMPlatillos(MPlatillos MPlatillos)
+    {
 
         if(IMPlatillosRepository.save(MPlatillos)!= null){
             return true;
@@ -28,12 +29,12 @@ public class MPlatillosDao {
         }
     }
 
-    public MPlatillos findUno(int id_Platillos) {
-        return IMPlatillosRepository.findById(id_Platillos).get();
+    public MPlatillos findUno(int idPlatillo) {
+        return IMPlatillosRepository.findById(idPlatillo).get();
     }
 
-    public boolean actualizaUnoPorId(int id_Platillos, MPlatillos MPlatillos) {
-                MPlatillos.setIdPlatillos(id_Platillos);
+    public boolean actualizaUnoPorId(int idPlatillo, MPlatillos MPlatillos) {
+                MPlatillos.setIdPlatillo(idPlatillo);
         return IMPlatillosRepository.save(MPlatillos)!=null ? true : false;
     }
 }

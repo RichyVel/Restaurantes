@@ -14,12 +14,13 @@ public class CuentasDao {
     @Autowired
     ICuentasRepository ICuentasRepository;
 
-    public List<Cuentas> findAllCuentas()
-    {
+    public List<Cuentas> findAllCuentas() {
         return ICuentasRepository.findAll();
     }
 
 
-    }
+}
+
+
 
 

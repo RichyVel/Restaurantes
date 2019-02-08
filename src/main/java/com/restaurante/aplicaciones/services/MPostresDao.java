@@ -11,7 +11,7 @@ public class MPostresDao {
 
 
     @Autowired
-    com.restaurante.aplicaciones.repository.IMPostresRepository IMPostresRepository;
+    IMPostresRepository IMPostresRepository;
 
     public List<MPostres> findAllMPostres()
     {
@@ -27,12 +27,12 @@ public class MPostresDao {
         }
     }
 
-    public MPostres findUno(int id_Postres) {
-        return IMPostresRepository.findById(id_Postres).get();
+    public MPostres findUno(int idPostre) {
+        return IMPostresRepository.findById(idPostre).get();
     }
 
-    public boolean actualizaUnoPorId(int id_Postres, MPostres MPostres) {
-        MPostres.setIdPostres(id_Postres);
+    public boolean actualizaUnoPorId(int idPostre, MPostres MPostres) {
+        MPostres.setIdPostre(idPostre);
         return IMPostresRepository.save(MPostres)!=null ? true : false;
     }
 }

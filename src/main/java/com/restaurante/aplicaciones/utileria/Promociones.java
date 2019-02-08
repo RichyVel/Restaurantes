@@ -4,27 +4,28 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
 import javax.persistence.*;
+import java.sql.Blob;
 
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
 @ToString
 @Entity
-public class MPostres {
+
+public class Promociones {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private int idPostre;
+        private int idPromocion;
 
         @Column
-        private String NombrePostre;
+        private String NombrePromocion;
 
         @Column
-        private String ODescripPostres;
+        private Blob xFoto;
 
+    }
 
-
-
-}
 

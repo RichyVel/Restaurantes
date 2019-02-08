@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
 import javax.persistence.*;
 
 @NoArgsConstructor
@@ -11,20 +12,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 @ToString
 @Entity
-public class MPostres {
-
+public class MBebidas {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private int idPostre;
+        private int idBebida;
 
         @Column
-        private String NombrePostre;
+        private String NombreBebida;
 
         @Column
-        private String ODescripPostres;
+        private String ODescripBebida;
 
-
-
-
-}
+    }
 

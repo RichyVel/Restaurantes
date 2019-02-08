@@ -1,7 +1,7 @@
 package com.restaurante.aplicaciones.controllers;
 
+
 import com.restaurante.aplicaciones.services.MPostresDao;
-import com.restaurante.aplicaciones.utileria.MPlatillos;
 import com.restaurante.aplicaciones.utileria.MPostres;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 public class MPostresController {
+
 
 
 
@@ -23,12 +24,9 @@ public class MPostresController {
     }
 
     @PostMapping("/MPostres")
-    public boolean postPlatillos(@RequestBody MPostres MPostres){
+    public boolean postMPostres(@RequestBody MPostres MPostres){
         return MPostresDao.posteaMPostres(MPostres);
-
     }
-
-
     /*
 
     @GetMapping("/MPostres/{id_Postres}")
@@ -36,11 +34,11 @@ public class MPostresController {
         return MPostresDao.findUno(id_Postres);
     }
 
-    @PutMapping("MPostres/{id_MPostres}")
+    @PutMapping("MPostres/{idPostre}")
     public boolean putMPostres(
-            @PathVariable("id_Postres")int id_Postres,
+            @PathVariable("idPostre")int idPostre,
             @RequestBody MPostres MPostres){
-        return MPostresDao.actualizaUnoPorId(id_Postres, MPostres);
+        return MPostresDao.actualizaUnoPorId(idPostre, MPostres);
     }
     */
 }

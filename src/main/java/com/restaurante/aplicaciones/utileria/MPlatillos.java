@@ -14,11 +14,12 @@ import javax.persistence.*;
 public class MPlatillos {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idPlatillos;
+    private int idPlatillo;
 
     @Column
     private String NombrePlatillo;
 
     @Column
-    private String Descripcion;
+    private String ODescripPlatillo;
+
 }
