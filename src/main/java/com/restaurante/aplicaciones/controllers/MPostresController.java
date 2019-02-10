@@ -1,31 +1,43 @@
 package com.restaurante.aplicaciones.controllers;
 
 
+import com.restaurante.aplicaciones.services.MPlatillosDao;
 import com.restaurante.aplicaciones.services.MPostresDao;
 import com.restaurante.aplicaciones.utileria.MPostres;
+import com.restaurante.aplicaciones.utileria.MPostres;
+import com.restaurante.aplicaciones.utileria.MPostres;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+
+@RestController
 public class MPostresController {
 
-
-
-
     @Autowired
-    MPostresDao MPostresDao;
+    com.restaurante.aplicaciones.services.MPostresDao MPostresDao;
 
     @GetMapping("/MPostres")
-    public List<MPostres> getPostres(){
+    public List<MPostres> getPostres() {
 
         return MPostresDao.findAllMPostres();
 
     }
 
     @PostMapping("/MPostres")
-    public boolean postMPostres(@RequestBody MPostres MPostres){
+    public boolean postMPostres(@RequestBody MPostres MPostres) {
         return MPostresDao.posteaMPostres(MPostres);
+    }
+
+
+    @PutMapping("MPostres/{idPostre}")
+    public boolean putMPostres(
+            @PathVariable("idPostre") int idPostre,
+            @RequestBody MPostres MPostres) {
+        return MPostresDao.actualizaUnoPorId(idPostre, MPostres);
     }
     /*
 

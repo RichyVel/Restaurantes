@@ -4,9 +4,12 @@ import com.restaurante.aplicaciones.repository.IMPostresRepository;
 import com.restaurante.aplicaciones.utileria.MPlatillos;
 import com.restaurante.aplicaciones.utileria.MPostres;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
 public class MPostresDao {
 
 
@@ -27,12 +30,12 @@ public class MPostresDao {
         }
     }
 
-    public MPostres findUno(int idPostre) {
-        return IMPostresRepository.findById(idPostre).get();
+    public MPostres findUno(int idPostres) {
+        return IMPostresRepository.findById(idPostres).get();
     }
 
-    public boolean actualizaUnoPorId(int idPostre, MPostres MPostres) {
-        MPostres.setIdPostre(idPostre);
+    public boolean actualizaUnoPorId(int idPostres, MPostres MPostres) {
+        MPostres.setIdPostre(idPostres);
         return IMPostresRepository.save(MPostres)!=null ? true : false;
     }
 }

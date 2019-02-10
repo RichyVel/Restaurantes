@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
 import javax.persistence.*;
 
 @NoArgsConstructor
@@ -11,6 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @ToString
 @Entity
+
 public class MPostres {
 
         @Id

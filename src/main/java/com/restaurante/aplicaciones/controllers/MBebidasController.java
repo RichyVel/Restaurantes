@@ -1,13 +1,17 @@
 package com.restaurante.aplicaciones.controllers;
+
 import com.restaurante.aplicaciones.services.MBebidasDao;
 import com.restaurante.aplicaciones.utileria.MBebidas;
+import com.restaurante.aplicaciones.utileria.MBebidas;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+
+
+
+
+@RestController
 public class MBebidasController {
 
     @Autowired
@@ -22,8 +26,15 @@ public class MBebidasController {
     }
 
     @PostMapping("/MBebidas")
-    public boolean postMPlatillos(@RequestBody MBebidas MBebidas)
+    public boolean postMBebidas(@RequestBody MBebidas MBebidas)
     {
         return MBebidasDao.posteaMBebidas(MBebidas);
+    }
+
+    @PutMapping("MBebidas/{idBebida}")
+    public boolean putMBebidas(
+            @PathVariable("idBebida") int idBebida,
+            @RequestBody MBebidas MBebidas) {
+        return MBebidasDao.actualizaUnoPorId(idBebida, MBebidas);
     }
 }

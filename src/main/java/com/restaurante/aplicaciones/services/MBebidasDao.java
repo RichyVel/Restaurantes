@@ -1,9 +1,13 @@
 package com.restaurante.aplicaciones.services;
+import com.restaurante.aplicaciones.repository.IMBebidasRepository;
 import com.restaurante.aplicaciones.utileria.MBebidas;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
 public class MBebidasDao {
 
 
