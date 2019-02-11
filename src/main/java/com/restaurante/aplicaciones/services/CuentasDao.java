@@ -2,8 +2,6 @@ package com.restaurante.aplicaciones.services;
 
 import com.restaurante.aplicaciones.repository.ICuentasRepository;
 import com.restaurante.aplicaciones.utileria.Cuentas;
-import com.restaurante.aplicaciones.utileria.MBebidas;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,9 +31,9 @@ public class CuentasDao {
         return ICuentasRepository.findById(idUsuario).get();
     }
 
-    public boolean actualizaUnoPorId(int idUsuario, Cuentas Cuentas) {
-        Cuentas.setIdUsuario(idUsuario);
-        return ICuentasRepository.save(Cuentas)!=null ? true : false;
+    public boolean actualizaUnoPorId(int idUsuario, Cuentas cuentas) {
+        cuentas.setIdUsuario(idUsuario);
+        return ICuentasRepository.save(cuentas)!=null ? true : false;
     }
 }
 

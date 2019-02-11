@@ -23,5 +23,6 @@ public class MBebidas {
         @Column
         private String ODescripBebida;
 
-    }
+
+}
 

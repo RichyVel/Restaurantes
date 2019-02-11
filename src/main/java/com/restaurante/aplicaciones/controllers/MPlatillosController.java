@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+
+
+//@CrossOrigin(origins = "http://localhost:4200")
 public class MPlatillosController {
 
 
@@ -35,7 +38,7 @@ public class MPlatillosController {
     }
 */
     @PutMapping("MPlatillos/{idPlatillo}")
-    public boolean putMPostres(
+    public boolean putMPlatillos(
             @PathVariable("idPlatillo") int idPlatillo,
             @RequestBody MPlatillos MPlatillos) {
         return MPlatillosDao.actualizaUnoPorId(idPlatillo, MPlatillos);
@@ -46,7 +49,7 @@ public class MPlatillosController {
             {
         IMPlatillosRepository.deleteById(idPlatillo);
     }
-   */
+*/
 }
 
 

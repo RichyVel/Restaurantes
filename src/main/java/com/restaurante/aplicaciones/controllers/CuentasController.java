@@ -16,7 +16,8 @@ public class CuentasController {
 
 
     @RequestMapping(value="/Cuentas", method = RequestMethod.GET)
-    public List<Cuentas> getCuentas(){
+    public List<Cuentas> getCuentas()
+    {
         return cuentasDao.findAllCuentas();
     }
 

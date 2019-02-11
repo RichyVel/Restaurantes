@@ -21,5 +21,5 @@ public class MPlatillos {
 
     @Column
     private String ODescripPlatillo;
-
+    
 }
